@@ -24,10 +24,10 @@
                     <nav class="nav justify-content-center">
                         @foreach (config('db.menu') as $link)
 
-                            {{-- <a href="{{ route($link['href']) }}"
+                            <a href="{{ route($link['href']) }}"
                                 class="{{ Route::currentRouteName() === $link['href'] ? 'active' : '' }}">
                                 {{ $link['name'] }}
-                            </a> --}}
+                            </a>
 
                         @endforeach
                     </nav>
