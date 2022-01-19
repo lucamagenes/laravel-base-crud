@@ -59,8 +59,8 @@ Route::get('/shop', function () {
 
 
 /* POST ROUTE */
-Route::get('posts', 'Admin\PostController@index')->name('admin.posts.index');
-Route::get('posts/create', 'Admin\PostController@create')->name('admin.posts.create');
+Route::get('admin/posts', 'Admin\PostController@index')->name('admin.posts.index');
+Route::get('admin/posts/create', 'Admin\PostController@create')->name('admin.posts.create');
 Route::post('posts', 'Admin\PostController@store')->name('admin.posts.store');
 Route::get('posts/{post}', 'Admin\PostController@show')->name('admin.posts.show');
 Route::get('posts/{post}/edit', 'AdminnPostController@edit')->name('admin.posts.edit');
