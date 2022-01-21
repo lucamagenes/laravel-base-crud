@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
 Route::get('/characters', function () {
     return view('characters');
@@ -49,14 +49,19 @@ Route::get('/fans', function () {
     return view('fans');
 })->name('fans');
 
-Route::get('/news', function () {
-    return view('news');
-})->name('news');
+/* Route::view('news', 'PostController@index')->name('guests.posts.index');
+Route::view('news/{post}', 'PostController@show')->name('guests.posts.show'); */
+
+Route::get('/news', 'PostController@index')->name('news');
+Route::get('/news/{post}', 'PostController@show')->name('guests.posts.show');
+
 
 Route::get('/shop', function () {
     return view('shop');
 })->name('shop');
 
+/* DASHBOARD */
+Route::view('admin', 'admin.dashboard')-> name('admin');
 
 /* POST ROUTE */
 Route::get('admin/posts', 'Admin\PostController@index')->name('admin.posts.index');

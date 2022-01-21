@@ -1,3 +1,5 @@
 <div class="logo">
-    <img src="{{ asset('img/dc-logo.png') }}" alt="" height="70">
+    <a href="{{ route('welcome') }}">
+        <img src="{{ asset('img/dc-logo.png') }}" alt="" height="70">
+    </a>
 </div>

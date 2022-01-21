@@ -14,12 +14,16 @@ a{
     text-decoration: none;
 }
 
+.active{
+    border-bottom: 4px solid #0382f9;
+}
+
 /* header */
 
 .top_header{
     background-color: $brand_color;
-    color: white;
-    p{
+    p, a{
+        color: white;
         font-size: 0.7rem;
         margin: 0;
         padding: 0.5rem 0;

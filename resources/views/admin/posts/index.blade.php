@@ -1,10 +1,10 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 
 @section('content')
 
 
-    <div class="container py-5">
+    <div class="container">
         <div class="heading d-flex justify-content-between align-items-center py-4">
             <h1>All posts in a table</h1>
             <a class="btn btn-primary" href="{{ route('admin.posts.create') }}" role="button">create</a>
@@ -16,7 +16,7 @@
             </div>
         @endif
 
-        <table class="table table-light">
+        <table class="table">
             <thead>
                 <tr>
                     <th>Id</th>

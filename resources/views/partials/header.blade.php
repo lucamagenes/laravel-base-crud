@@ -3,8 +3,8 @@
     <div class="top_header">
         <div class="container">
             <div class="row justify-content-end">
-                <div class="col-2 text-end text-light">
-                    <a href="{{ route('admin.posts.index') }}">ADMIN</a>
+                <div class="col-2 text-end">
+                    <a href="{{ route('admin') }}">ADMIN</a>
                 </div>
                 <div class="col-2 text-end">
                     <p>DC POWER VISA&reg </p>
@@ -31,7 +31,6 @@
                                 class="{{ Route::currentRouteName() === $link['href'] ? 'active' : '' }}">
                                 {{ $link['name'] }}
                             </a>
-
                         @endforeach
                     </nav>
                 </div>
