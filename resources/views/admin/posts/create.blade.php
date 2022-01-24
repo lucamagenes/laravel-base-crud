@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="container py-5">
+    <div class="container py-4">
 
         <h1>Create a new Post</h1>
 

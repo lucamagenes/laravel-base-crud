@@ -25,17 +25,26 @@ Route::get('/comics', function () {
     return view('comics');
 })->name('comics');
 
-Route::get('/movies', function () {
+/* Route::get('/movies', function () {
     return view('movies');
-})->name('movies');
+})->name('movies'); */
+Route::get('/movies', 'MovieController@index')->name('movies');
+Route::get('/movies/{movie}', 'MovieController@show')->name('guests.movies.show');
+
+Route::resource('admin/movies', 'Admin\MovieController');
 
 Route::get('/tv', function () {
     return view('tv');
 })->name('tv');
 
-Route::get('/games', function () {
+/* Route::get('/games', function () {
     return view('games');
-})->name('games');
+})->name('games'); */
+
+Route::get('/games', 'GameController@index')->name('games');
+Route::get('/games/{game}', 'GameController@show')->name('guests.games.show');
+
+Route::resource('admin/games', 'Admin\GameController');
 
 Route::get('/collectibles', function () {
     return view('collectibles');
